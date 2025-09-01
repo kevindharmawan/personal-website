@@ -8,7 +8,7 @@ export default function Home() {
           Hello!
         </h1>
         <p className="w-full m-0 p-0 text-2xl text-center font-[family-name:var(--font-geist-mono)]">
-          I am a first-year Computer Science PhD student in Stony Brook University. I write code, I read books, I lift weights, and I cook food.
+          I am a second-year Computer Science PhD student in Stony Brook University. I write code, I read books, I lift weights, and I cook food.
         </p>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
