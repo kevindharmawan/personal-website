@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kevin Dharmawan</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111111;
+        --muted: #5a5a5a;
+        --line: #d9d9d9;
+        --max: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+          monospace;
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      .page {
+        width: min(100% - 2.5rem, var(--max));
+        margin: 0 auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .header-inner {
+        width: min(100% - 2.5rem, var(--max));
+        margin: 0 auto;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .site-title {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.2em;
+      }
+
+      a:hover,
+      a:focus-visible {
+        color: var(--muted);
+      }
+
+      main {
+        padding: 3.5rem 0 4rem;
+      }
+
+      section {
+        padding: 2rem 0;
+        border-top: 1px solid var(--line);
+      }
+
+      section:first-of-type {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      section:last-of-type {
+        padding-bottom: 0;
+      }
+
+      #work {
+        border-top: none;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: 600;
+        margin: 0 0 1rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h2 {
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-top: 2.25rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0 0 1rem;
+        padding-left: 1.25rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      .thread {
+        margin-bottom: 2rem;
+      }
+
+      .thread:last-child {
+        margin-bottom: 0;
+      }
+
+      .status {
+        color: var(--muted);
+        margin-bottom: 0;
+      }
+
+      .entry {
+        margin-bottom: 0.85rem;
+      }
+
+      .entry:last-child {
+        margin-bottom: 0;
+      }
+
+      .entry p:last-child {
+        margin-bottom: 0;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 1.5rem 0 2.5rem;
+      }
+
+      .footer-text {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      @media (max-width: 560px) {
+        .header-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        nav {
+          gap: 0.75rem;
+        }
+
+        main {
+          padding-top: 2.5rem;
+        }
+
+        section {
+          padding: 1.75rem 0;
+        }
+      }
+
+      @media print {
+        header {
+          position: static;
+          border-bottom: 1px solid #999;
+        }
+
+        nav {
+          display: none;
+        }
+
+        body {
+          font-size: 11pt;
+          line-height: 1.5;
+          color: #000;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+
+        section,
+        footer {
+          border-color: #bbb;
+          page-break-inside: avoid;
+        }
+
+        .muted,
+        .status,
+        .footer-text {
+          color: #222;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="site-title">Kevin Dharmawan</div>
+        <!-- <nav aria-label="Sections">
+          <a href="#about">about</a>
+          <a href="#work">Work</a>
+        </nav> -->
+      </div>
+    </header>
+
+    <main class="page">
+      <section id="about" aria-labelledby="about-title">
+        <h1 id="about-title">About</h1>
+        <p>
+          I am a second-year PhD student in Computer Science at Stony Brook University.
+          My research focuses on distributed databases, particularly consensus protocols.
+          I study how replication systems adapt to variability in load and communication
+          in both trusted and untrusted environments. More broadly, I am interested in how
+          data is collected, moved, and stored at scale.
+        </p>
+        <p>Contact: kdharmawan [at] cs [dot] stonybrook [dot] edu</p>
+      </section>
+
+      <section id="work" aria-labelledby="work-title">
+        <h1 id="work-title">Work</h1>
+        <div class="entry">
+          <p><strong>Timer-as-a-Service: Adaptive Timeout Configuration in Distributed Protocols</strong> <span class="muted">NEDB Poster 2026</span></p>
+        </div>
+        <div class="entry">
+          <p><strong>Demonstration of Ver: View Discovery in the Wild</strong> <span class="muted">SIGMOD Demo 2024</span></p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page">
+      <p class="footer-text">Last updated: February 12, 2026</p>
+    </footer>
+  </body>
+</html>
